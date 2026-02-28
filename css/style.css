@@ -1241,6 +1241,18 @@ body {
           flex-direction: column;
 }
 
+.slide-for-who_1 {
+  background: #252527;
+}
+
+.slide-for-who_2 {
+  background: #565657;
+}
+
+.slide-for-who_3 {
+  background: #252527;
+}
+
 .slide-for-who_4 {
   background: #fff;
 }
@@ -1410,6 +1422,8 @@ body {
   background: rgba(255, 255, 255, 0.5);
   -webkit-filter: blur(9.375rem);
           filter: blur(9.375rem);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .inside__container {
@@ -1680,9 +1694,13 @@ body {
   right: -2.0625rem;
 }
 
+.no-webp .result{
+  background: url("../img/result/bg.png") 50%/cover no-repeat; }
+
 .result {
   overflow: hidden;
   padding: 7.5rem 0rem 3.75rem;
+  position: relative;
 }
 
 .result__left {
@@ -2433,11 +2451,6 @@ body {
   .slide-for-who {
     backdrop-filter: blur(1.25rem);
     -webkit-backdrop-filter: blur(1.25rem);
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .slide-for-who_4 {
-    background: #fff;
   }
 
   .faq__top {
@@ -3207,7 +3220,7 @@ body {
   }
 
   .job {
-    padding: 2.5rem 0rem;
+    padding: 2.5rem 0rem 7.5rem;
   }
 
   .job-top {
@@ -3225,6 +3238,10 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 19.1875rem;
             flex: 0 0 19.1875rem;
+  }
+
+  .result {
+    padding: 2.5rem 0rem 3.75rem;
   }
 
   .result__title-decor {
@@ -3458,17 +3475,11 @@ body {
     top: 0.625rem;
   }
 
-  .slide-for-who_1 {
-    background: #252527;
-  }
-
   .slide-for-who_2 {
-    background: #565657;
     top: 1.25rem;
   }
 
   .slide-for-who_3 {
-    background: #252527;
     top: 1.875rem;
   }
 
@@ -3653,6 +3664,8 @@ body {
 .webp .target::after{ background: url(../img/target/bg.webp) 50%/cover no-repeat; }
 
 .webp .inside__left::before{ background: url(../img/inside/decor.webp) 50%/100% no-repeat; }
+
+.webp .result{ background: url(../img/result/bg.webp) 50%/cover no-repeat; }
 
 .webp .reviews::after{ background: url(../img/reviews/decor.webp) 50%/cover no-repeat; }
 
