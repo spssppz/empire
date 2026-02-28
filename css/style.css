@@ -569,10 +569,6 @@ body {
   color: #fff;
 }
 
-.hero__title span:last-child {
-  padding-left: 3.125rem;
-}
-
 .hero__title:not(:last-child) {
   margin-bottom: 4.25rem;
 }
@@ -660,7 +656,7 @@ body {
   max-width: 45.625rem;
 }
 
-.why-we__title span {
+.why-we__title span:not(:last-child) {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1290,17 +1286,22 @@ body {
           align-items: flex-start;
 }
 
-.slide-for-who_4 .slide-for-who__title {
+.slide-for-who_1 .slide-for-who__title {
   font-size: 2.8125rem;
-  color: #000;
+  padding: 0rem 1.25rem;
+}
+
+.slide-for-who_2 .slide-for-who__title {
+  font-size: 2.1875rem;
 }
 
 .slide-for-who_3 .slide-for-who__title {
   font-size: 2.1875rem;
 }
 
-.slide-for-who_2 .slide-for-who__title {
-  font-size: 2.1875rem;
+.slide-for-who_4 .slide-for-who__title {
+  font-size: 2.8125rem;
+  color: #000;
 }
 
 .slide-for-who__title span:last-child {
@@ -2372,9 +2373,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 1.25rem;
   line-height: 1.6;
   text-transform: uppercase;
@@ -2390,12 +2388,28 @@ body {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  margin-left: auto;
 }
 
 .faq-item__title._spoller-active img {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.faq-item__title-bonus {
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-transform: lowercase;
+  text-align: justify;
+  color: #484848;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.125rem;
 }
 
 .faq-item__body {
@@ -2468,6 +2482,10 @@ body {
 
   .hero__container {
     gap: 0.625rem;
+  }
+
+  .hero__title span:last-child {
+    padding-left: 3.125rem;
   }
 
   .hero__subtitle {
@@ -2862,9 +2880,10 @@ body {
   }
 
   .hero__cap {
-    margin-left: -0.8125rem;
+    margin-left: -0.875rem;
     font-size: 1.375rem;
     padding: 1.125rem 1.25rem;
+    margin-bottom: -0.625rem;
   }
 
   .hero__title {
@@ -2873,10 +2892,6 @@ body {
 
   .hero__title span:first-child {
     font-size: 3.4375rem;
-  }
-
-  .hero__title span:last-child {
-    padding-left: 2.0625rem;
   }
 
   .hero__title:not(:last-child) {
@@ -2931,6 +2946,11 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: left;
+  }
+
+  .why-we__title span:last-child {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 
   .why-we__title:not(:last-child) {
@@ -3132,6 +3152,10 @@ body {
     bottom: -1.25rem;
   }
 
+  .profit-right__subtitle:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+
   .profit-right__text {
     display: none;
   }
@@ -3186,16 +3210,20 @@ body {
     font-size: 2.25rem;
   }
 
-  .slide-for-who_4 .slide-for-who__title {
+  .slide-for-who_1 .slide-for-who__title {
     font-size: 2.8125rem;
+  }
+
+  .slide-for-who_2 .slide-for-who__title {
+    font-size: 2.1875rem;
   }
 
   .slide-for-who_3 .slide-for-who__title {
     font-size: 2.1875rem;
   }
 
-  .slide-for-who_2 .slide-for-who__title {
-    font-size: 2.1875rem;
+  .slide-for-who_4 .slide-for-who__title {
+    font-size: 2.8125rem;
   }
 
   .inside__container {
@@ -3318,6 +3346,10 @@ body {
     max-width: 12.4375rem;
   }
 
+  .tariff__text p:not(:last-child) {
+    margin-bottom: 1.3125rem;
+  }
+
   .get-video {
     padding: 2.8125rem 0rem;
   }
@@ -3400,7 +3432,7 @@ body {
   }
 
   .hero__title span:first-child {
-    font-size: 2.75rem;
+    font-size: 2.6875rem;
   }
 
   .hero__subtitle {
@@ -3472,23 +3504,28 @@ body {
 
   .slide-for-who {
     position: sticky;
-    top: 0.625rem;
+    top: 6.25rem;
   }
 
   .slide-for-who_2 {
-    top: 1.25rem;
+    top: 6.875rem;
   }
 
   .slide-for-who_3 {
-    top: 1.875rem;
+    top: 7.5rem;
   }
 
   .slide-for-who_4 {
-    top: 2.5rem;
+    top: 8.125rem;
+  }
+
+  .inside__title span:last-child {
+    padding-left: 5.625rem;
   }
 
   .inside__descr {
     font-size: 1rem;
+    padding-left: 5.625rem;
   }
 
   .result__pagination {
@@ -3538,10 +3575,6 @@ body {
 @media (max-width: 29.99875em) {
   .title {
     font-size: 2.3125rem;
-  }
-
-  .hero__subtitle {
-    font-size: 1.375rem;
   }
 
   .why-we__title {
@@ -3614,6 +3647,10 @@ body {
 
   .hero__title span:first-child {
     font-size: 2.3125rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.375rem;
   }
 
   .slide-for-who__title {
