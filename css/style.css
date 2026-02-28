@@ -292,6 +292,7 @@ body {
 
 .header__burger {
   position: relative;
+  z-index: 4;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1.875rem;
           flex: 0 0 1.875rem;
@@ -362,13 +363,21 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   max-height: calc(100vh - 6.875rem);
+  max-width: 77.5rem;
+  margin: 0 auto;
 }
 
 .menu-open .menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  top: 5.375rem;
+  top: 1.625rem;
+}
+
+.menu__list {
+  display: -ms-grid;
+  display: grid;
+  gap: 3.125rem;
 }
 
 .menu__list:not(:last-child) {
@@ -382,10 +391,6 @@ body {
 .menu__item a {
   font-size: 1.125rem;
   text-transform: uppercase;
-}
-
-.menu__item:not(:last-child) {
-  margin-bottom: 1.875rem;
 }
 
 .menu__btn {
@@ -514,11 +519,22 @@ body {
 }
 
 .hero__subtitle {
+  font-family: "HeliosExt", sans-serif;
   font-size: 1.5625rem;
   line-height: 1.2;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.26);
+  color: #dbdbdb;
   letter-spacing: 0.03em;
+}
+
+.hero__btn:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.hero__btn-bot {
+  border: 0.0625rem solid #fff;
+  background: transparent;
+  color: #fff;
 }
 
 .hero__image {
@@ -1177,6 +1193,10 @@ body {
   color: rgba(255, 255, 255, 0.13);
 }
 
+.slide-for-who_4 .slide-for-who__num {
+  color: rgba(0, 0, 0, 0.13);
+}
+
 .slide-for-who__title {
   position: relative;
   font-weight: 500;
@@ -1195,10 +1215,30 @@ body {
           align-items: flex-start;
 }
 
+.slide-for-who_4 .slide-for-who__title {
+  color: #000;
+}
+
+.slide-for-who_3 .slide-for-who__title {
+  font-size: 2.1875rem;
+}
+
+.slide-for-who_2 .slide-for-who__title {
+  font-size: 2.1875rem;
+}
+
 .slide-for-who__title span:last-child {
   text-align: right;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.slide-for-who_3 .slide-for-who__title span:last-child {
+  font-size: 2.8125rem;
+}
+
+.slide-for-who_2 .slide-for-who__title span:last-child {
+  font-size: 2.8125rem;
 }
 
 .slide-for-who__descr {
@@ -1215,6 +1255,12 @@ body {
   margin-top: -0.625rem;
 }
 
+.slide-for-who_4 .slide-for-who__descr {
+  background: rgba(0, 0, 0, 0.1);
+  border: 0.0625rem solid rgba(0, 0, 0, 0.04);
+  color: #000;
+}
+
 .slide-for-who__descr:not(:last-child) {
   margin-bottom: 1.125rem;
 }
@@ -1225,6 +1271,10 @@ body {
   text-transform: uppercase;
 }
 
+.slide-for-who_4 .slide-for-who__cap {
+  color: #000;
+}
+
 .slide-for-who__cap:not(:last-child) {
   margin-bottom: 0.75rem;
 }
@@ -1233,6 +1283,10 @@ body {
   font-weight: 500;
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.slide-for-who_4 .slide-for-who__text {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .slide-for-who__text p:not(:last-child) {
@@ -1264,6 +1318,15 @@ body {
   font-weight: 900;
   font-size: 2.8125rem;
   color: rgba(30, 30, 30, 0.1);
+}
+
+.slide-for-who_4 .slide-for-who__btn {
+  color: #fff;
+  background: #000;
+}
+
+.slide-for-who_4 .slide-for-who__btn::after {
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .inside {
@@ -2066,6 +2129,7 @@ body {
 
 .get-video__body {
   border-radius: 1.8125rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2290,6 +2354,10 @@ body {
     min-width: 25.75rem;
   }
 
+  .hero__btn-bot {
+    min-width: 25.75rem;
+  }
+
   .hero__decor_mob {
     display: none;
   }
@@ -2312,16 +2380,17 @@ body {
 }
 
 @media (min-width: 61.99875em) {
-  .header__burger {
-    display: none;
-  }
-
-  .menu {
-    display: none;
+  .menu__list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .hero__container {
     gap: 0.625rem;
+  }
+
+  .hero__subtitle {
+    max-width: 25rem;
   }
 
   .hero__subtitle:not(:last-child) {
@@ -2329,6 +2398,10 @@ body {
   }
 
   .hero__btn_mob {
+    display: none;
+  }
+
+  .hero__btn-bot_mob {
     display: none;
   }
 
@@ -2407,6 +2480,10 @@ body {
 
   .for-who__btn-next {
     margin-bottom: 5rem;
+  }
+
+  .slide-for-who_4 {
+    background-color: #fff;
   }
 
   .inside__container {
@@ -2674,6 +2751,14 @@ body {
     font-size: 1.9375rem;
   }
 
+  .menu-open .menu {
+    top: 5.375rem;
+  }
+
+  .menu__list {
+    gap: 1.875rem;
+  }
+
   .hero {
     padding: 4.375rem 0rem;
   }
@@ -2708,15 +2793,18 @@ body {
   }
 
   .hero__title:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 1.875rem;
   }
 
   .hero__subtitle {
     font-size: 1.875rem;
-    padding-left: 2.0625rem;
   }
 
   .hero__btn_pc {
+    display: none;
+  }
+
+  .hero__btn-bot_pc {
     display: none;
   }
 
@@ -3007,6 +3095,14 @@ body {
     font-size: 2.25rem;
   }
 
+  .slide-for-who_3 .slide-for-who__title {
+    font-size: 2.1875rem;
+  }
+
+  .slide-for-who_2 .slide-for-who__title {
+    font-size: 2.1875rem;
+  }
+
   .inside__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3157,6 +3253,11 @@ body {
     padding: 0.5rem 1.5rem;
   }
 
+  .get-video__decor {
+    margin-bottom: -20%;
+    max-width: 66%;
+  }
+
   .faq {
     padding: 2.8125rem 0 3.75rem;
   }
@@ -3200,6 +3301,10 @@ body {
   }
 
   .hero__btn {
+    width: 100%;
+  }
+
+  .hero__btn-bot {
     width: 100%;
   }
 
@@ -3263,21 +3368,21 @@ body {
     top: 0.625rem;
   }
 
-  .slide-for-who:nth-child(1) {
+  .slide-for-who_1 {
     background: #252527;
   }
 
-  .slide-for-who:nth-child(2) {
+  .slide-for-who_2 {
     background: #565657;
     top: 1.25rem;
   }
 
-  .slide-for-who:nth-child(3) {
+  .slide-for-who_3 {
     background: #252527;
     top: 1.875rem;
   }
 
-  .slide-for-who:nth-child(4) {
+  .slide-for-who_4 {
     background: #252527;
     top: 2.5rem;
   }
@@ -3365,6 +3470,10 @@ body {
 
   .get-video__title {
     font-size: 2rem;
+  }
+
+  .get-video__item {
+    padding: 0.5rem 1.0625rem;
   }
 
   .get-video__btn {
