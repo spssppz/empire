@@ -590,7 +590,7 @@ body {
 }
 
 .why-we {
-  padding: 4.625rem 0rem;
+  padding: 4.625rem 0rem 8.75rem;
   overflow: hidden;
 }
 
@@ -1180,6 +1180,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.slide-for-who_4 {
+  background-color: #fff;
 }
 
 .slide-for-who__num {
@@ -2482,10 +2486,6 @@ body {
     margin-bottom: 5rem;
   }
 
-  .slide-for-who_4 {
-    background-color: #fff;
-  }
-
   .inside__container {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2543,6 +2543,9 @@ body {
   }
 
   .get-video__body {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     padding-right: 3.75rem;
   }
 
@@ -2559,10 +2562,9 @@ body {
   }
 
   .get-video__decor {
-    margin-top: -2.5rem;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 28.2926829268%;
-            flex: 0 0 28.2926829268%;
+        -ms-flex: 0 0 33.2520325203%;
+            flex: 0 0 33.2520325203%;
   }
 
   .faq__cols {
@@ -2828,6 +2830,10 @@ body {
 
   .hero__descr span {
     font-size: 1.5625rem;
+  }
+
+  .why-we {
+    padding: 4.625rem 0rem;
   }
 
   .why-we__title {
@@ -3136,6 +3142,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 9.375rem;
   }
 
   .slide-job {
@@ -3254,7 +3261,6 @@ body {
   }
 
   .get-video__decor {
-    margin-bottom: -20%;
     max-width: 66%;
   }
 
@@ -3383,7 +3389,6 @@ body {
   }
 
   .slide-for-who_4 {
-    background: #252527;
     top: 2.5rem;
   }
 
@@ -3536,6 +3541,10 @@ body {
 @media (any-hover: hover) {
   .btn:hover {
     opacity: 0.8;
+  }
+
+  .job-top__btn:hover {
+    opacity: 1;
   }
 
   .result__pagination .swiper-pagination-bullet:hover {
